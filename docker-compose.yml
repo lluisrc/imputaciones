@@ -1,7 +1,7 @@
 
 services:
   app:
-    image: imputacionesriu:v2
+    image: lroca/imputacionesriu:v2
     ports:
       - 8000:8000
     volumes: 

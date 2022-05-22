@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h1>Registro Diario</h1>
+    <a href="{% url 'registros'%}">Back</a>
+
+    <form method="post">
+        {% csrf_token %}
+        <table class="table" style="text-align: center;">
+            <thead>
+              <tr>
+                <th>Día</th>
+                <th>Entrada</th>
+                <th>Comida</th>
+                <th>Llegada</th>
+                <th>Salida</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ form.dia }}</td>
+                <td>{{ form.entrada }}</td>
+                <td>{{ form.comida }}</td>
+                <td>{{ form.llegada }}</td>
+                <td>{{ form.salida }}</td>
+              </tr>
+              <tr>
+                <td><a href="#" onclick="seteoDay('dia')">Hoy</a></td>
+                <td><a href="#" onclick="seteoTime('entrada')">Ahora</a></td>
+                <td><a href="#" onclick="seteoTime('comida')">Ahora</a></td>
+                <td><a href="#" onclick="seteoTime('llegada')">Ahora</a></td>
+                <td><a href="#" onclick="seteoTime('salida')">Ahora</a></td>
+
+              </tr>
+            </tbody>
+          </table>
+        <input class="btn btn-success" type="submit" value="Guardar">
+    </form> 
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h1>Tabla de Registros</h1>
+    <table class="table" style="text-align: center;">
+      <thead>
+        <tr>
+          <th>Día</th>
+          <th>Entrada</th>
+          <th>Comida</th>
+          <th>Llegada</th>
+          <th>Salida</th>
+        </tr>
+      </thead>
+      <tbody>
+
+    {% if registro_list %}
+    
+        {% for registro in registro_list %}
+          <tr>
+            <td><a href="{{ registro.get_absolute_url_update }}">{{ registro.dia }}</a>
+            <td>{{ registro.entrada }}</td>
+            <td>{{ registro.comida }}</td>
+            <td>{{ registro.llegada }}</td>
+            <td>{{ registro.salida }}</td>
+          </tr>
+      {% endfor %}
+    {% else %}
+      <p>There are no registres.</p>
+    {% endif %}
+      </tbody>
+    </table>
+    <a href="{% url 'registro-create' %}"><button class="btn btn-success">Nuevo Registro</button></a>
+{% endblock %}
+

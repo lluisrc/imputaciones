@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% block title %}<title>Local Library</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<style>
+  input {
+    text-align: center;
+  }
+  th{
+    text-align: center;
+  }
+</style>
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+      {% block content %}{% endblock %}      
+  </div>
+  <script>
+    function seteoDay(id) {
+      let setDay = document.getElementById('id_dia')
+      let today = new Date();
+      let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+      switch (id){
+        case 'dia':
+        setDay.value = date
+        break
+      }
+    }
+    function seteoTime(id){
+      let setEntrada = document.getElementById('id_entrada')
+      let setComida = document.getElementById('id_comida')
+      let setLlegada = document.getElementById('id_llegada')
+      let setSalida = document.getElementById('id_salida')
+      let today = new Date();
+      let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      
+      switch (id){
+        case 'entrada':
+        setEntrada.value = time
+        break
+
+        case 'comida':
+        setComida.value = time
+        break
+
+        case 'llegada':
+        setLlegada.value = time
+        break
+
+        case 'salida':
+        setSalida.value = time
+        break
+      }
+    }
+
+  </script>
+</body>
+</html>

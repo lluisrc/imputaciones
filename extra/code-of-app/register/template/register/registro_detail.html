@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+  <h1>Detelle del registro</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Día</th>
+        <th>Entrada</th>
+        <th>Comida</th>
+        <th>Llegada</th>
+        <th>Salida</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="{{ registro.get_absolute_url_update }}"><button class="btn btn-warning">Editar</button></a></td>
+        <td>{{ registro.dia }}</td>
+        <td>{{ registro.entrada }}</td>
+        <td>{{ registro.comida }}</td>
+        <td>{{ registro.llegada }}</td>
+        <td>{{ registro.salida }}</td>
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}
