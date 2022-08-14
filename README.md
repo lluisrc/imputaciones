@@ -19,5 +19,5 @@ http://localhost:8000/register/registros/
 ````
 
 ## How do it is structured
-- When you deploy a docker-compose, the containter have a volumen to read and write de db folder. Now the app have persistent data.
-- In extras you can see the code of app and how created the image
+- When you deploy a docker-compose, the containter have a volumen to read and write the db folder. Now the app have persistent data.
+- In extras you can see the code of app and how i created the image
