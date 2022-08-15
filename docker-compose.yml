@@ -1,8 +1,10 @@
-
+version: '3'
 services:
   app:
     image: lroca/imputacionesriu:v2
     ports:
       - 8000:8000
-    volumes: 
-      - ./db:/usr/src/app/db:rw
+    volumes:
+      - vol-imputacionesriu-1:/usr/src/app/db:rw
+volumes:
+  vol-imputacionesriu-1:
