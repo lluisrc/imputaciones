@@ -22,7 +22,8 @@ http://localhost:8000/register/registros/
 ### Docker-compose
 Docker-compose use imputacionesriu image from hub.docker.com --> https://hub.docker.com/r/lroca/imputacionesriu.
 Also docker-compose use a volume to get persistence for db
-<br>Dockerfile.yml
+<br>
+Dockerfile.yml
 ```
 version: '3'
 services:
