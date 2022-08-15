@@ -2,7 +2,7 @@
 This project is a time register app for automatize office go in and go out .
 
 ## Prerrequisites
-Install docker on your environment.
+Install docker (including docker-compose) on your environment.
 
 ## Startup
 Clone the repository.
