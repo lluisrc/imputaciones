@@ -19,10 +19,7 @@ http://localhost:8000/register/registros/
 ```
 
 ## More about project
-
-- When you deploy a docker-compose, the containter have a volumen to read and write the db folder. Now the app have persistent data.
-- In extras you can see the code of app and how i created the image.
-
+### Docker-compose
 Docker-compose use imputacionesriu image from hub.docker.com --> https://hub.docker.com/r/lroca/imputacionesriu.
 Also docker-compose use a volume to get persistence for db
 Dockerfile.yml
@@ -39,3 +36,19 @@ volumes:
   vol-imputacionesriu-1:
 ```
 <img width="246" alt="Screenshot_15" src="https://user-images.githubusercontent.com/60383607/184658830-d5c01586-82e4-41f8-8a81-ccce9e9b6847.png">
+
+### Dockerfile
+I have built the image from this Dockerfile
+Dockerfile
+```
+FROM python:3.9
+
+WORKDIR /usr/src/app
+RUN pip install django
+COPY . .
+
+EXPOSE 8000
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+```
+Once built the image I uploaded to Docker Hub.
+Dockerfile
