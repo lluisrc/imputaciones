@@ -20,8 +20,8 @@ http://localhost:8000/register/registros/
 
 ## More about project
 ### Docker-compose
-Docker-compose use imputacionesriu image from hub.docker.com --> https://hub.docker.com/r/lroca/imputacionesriu.
-Also docker-compose use a volume to get persistence for db
+Docker-compose use imputacionesriu image from hub.docker.com --> https://hub.docker.com/r/lroca/imputacionesriu.<br>
+Also docker-compose use a volume to get persistence for db<br>
 <br>
 Dockerfile.yml
 ```
@@ -39,7 +39,8 @@ volumes:
 <img width="246" alt="Screenshot_15" src="https://user-images.githubusercontent.com/60383607/184658830-d5c01586-82e4-41f8-8a81-ccce9e9b6847.png">
 
 ### Dockerfile
-I have built the image from this Dockerfile
+I have built the image from this Dockerfile<br>
+<br>
 Dockerfile
 ```
 FROM python:3.9
