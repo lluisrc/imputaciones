@@ -36,7 +36,7 @@ services:
 volumes:
   vol-imputacionesriu-1:
 ```
-<img width="246" alt="Screenshot_15" src="https://user-images.githubusercontent.com/60383607/184658830-d5c01586-82e4-41f8-8a81-ccce9e9b6847.png">
+<img width="492" alt="Screenshot_15" src="https://user-images.githubusercontent.com/60383607/184658830-d5c01586-82e4-41f8-8a81-ccce9e9b6847.png">
 
 ### Dockerfile
 I have built the image from this Dockerfile<br>
